@@ -1,3 +1,3 @@
 # PISK
 
-Contributor: Lana
+Contributors: Lana Vu and Uy Tran
