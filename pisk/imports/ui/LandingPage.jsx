@@ -17,7 +17,6 @@ export default class LandingPage extends Component {
   render() {
     return (
       <div>
-        <CalendarIcon style={{height:150, width:150, color:cyan500}}/>
       </div>);
   }
 }
