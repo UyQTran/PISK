@@ -13,41 +13,24 @@
   </head>
   <body>
     <!-- page content -->
-    <div class="air-above"/>
-    <div class="navbar-wrapper">
-      <div class="container">
+    <div ng-app="myApp" ng-controller="myCtrl">
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">PI:SK</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Arrangementer</a></li>
-                <li><a href="#about">Fortran</a></li>
-                <li><a href="#contact">Vedtekter</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+      First Name: <input type="text" ng-model="firstName"><br>
+      Last Name: <input type="text" ng-model="lastName"><br>
+      <br>
+      Full Name: {{firstName + " " + lastName}}
 
-      </div>
-    </div>
-    <div class="air-above"/>
-    <div class="container" height=100% width=100%>
-      <img height=150px src="http://www.aokautereschool.net/Parentsandcarers/Calendar/files/stacks-image-085b3fa.png"/>
-      <b>Neste Arrangement<b/>
-    <div/>
+</div>
     <!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  var app = angular.module('myApp', []);
+  app.controller('myCtrl', function($scope) {
+      $scope.firstName= "John";
+      $scope.lastName= "Doe";
+  });
+  </script>
   </body>
 </html>
