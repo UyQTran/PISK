@@ -4,13 +4,14 @@ import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import LandingPage from './LandingPage.jsx';
+import ScrollWithPage from './ScrollWithPage.jsx';
 injectTapEventPlugin();
 
 
 // App component - represents the whole app
 const tabs =
 [{label:"Hva skjer?", value:0, component:(<LandingPage/>)},
-{label:"Arrangementer", value:1, component:(<LandingPage/>)},
+{label:"Kalender", value:1, component:(<LandingPage/>)},
 {label:"Fortran", value:2, component:(<LandingPage/>)},
 {label:"Vedtekter", value:3, component:(<LandingPage/>)}];
 
@@ -27,6 +28,7 @@ export default class App extends Component {
   }
 
   handleChange(tabNumber) {
+    $("html, body").animate({ scrollTop: 0 }, "fast");
     this.setState({activeTab:tabNumber});
   }
 
@@ -37,22 +39,25 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <div className="air-above"/>
-        <div style={{display: 'flex', alignItems: 'space-between'}}>
-          <div style={{marginRight:20, marginLeft:40, fontSize:38}}>PI:SK</div>
-          <Tabs
-            style={{width:800}}
-            onChange={this.handleChange.bind(this)}
-            value={this.state.activeTab}>
-            {tabs.map((tab, index)=>{
-              return (<Tab
-                label={tab.label}
-                value={tab.value}
-                key={index}>
-                {tab.component}
-            </Tab>);
-            })}
-          </Tabs>
+        <ScrollWithPage>
+          <div className="air-above"/>
+          <div style={{display: 'flex', alignItems: 'space-between'}}>
+            <div style={navBarStyles}>PI:SK</div>
+            <Tabs
+              style={{width:550}}
+              onChange={this.handleChange.bind(this)}
+              value={this.state.activeTab}>
+              {tabs.map((tab, index)=>{
+                return (<Tab
+                  label={tab.label}
+                  value={tab.value}
+                  key={index}/>);
+              })}
+            </Tabs>
+          </div>
+        </ScrollWithPage>
+        {tabs[this.state.activeTab].component}
+        <div>
         </div>
       </div>
     );
@@ -62,6 +67,14 @@ export default class App extends Component {
 App.childContextTypes = {
   muiTheme: React.PropTypes.object.isRequired
 };
+
+const navBarStyles = {
+  marginRight:50,
+  marginLeft:50,
+  fontSize:38,
+  fontFamily:"Roboto, sans-serif",
+  marginTop:5
+}
 
 const piskTheme = {
   fontFamily:"Roboto, sans-serif",

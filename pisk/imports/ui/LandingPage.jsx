@@ -10,13 +10,12 @@ export default class LandingPage extends Component {
 
     this.state = {
     };
-
   }
-
 
   render() {
     return (
-      <div>
+      <div style={{display: 'flex', alignItems: 'space-between'}}>
+        <CalendarIcon style={{height:100, width:100, color:cyan500}}/>
       </div>);
   }
 }
