@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import CalendarIcon from 'material-ui/svg-icons/action/event';
 import {cyan500} from 'material-ui/styles/colors';
-import styret from '/data/styret.json';
+import calendarfeed from '/data/calendarfeed.json';
 
 
-export default class LandingPage extends Component {
+export default class WhatsUpPage extends Component {
 
   constructor(props) {
     super(props);

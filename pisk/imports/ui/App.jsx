@@ -7,7 +7,6 @@ import LandingPage from './LandingPage.jsx';
 import ScrollWithPage from './ScrollWithPage.jsx';
 injectTapEventPlugin();
 
-
 // App component - represents the whole app
 const tabs =
 [{label:"Hva skjer?", value:0, component:(<LandingPage/>)},
@@ -15,7 +14,7 @@ const tabs =
 {label:"Fortran", value:2, component:(<LandingPage/>)},
 {label:"Vedtekter", value:3, component:(<LandingPage/>)}];
 
-export default class App extends Component {
+export default class AppHeader extends Component {
 
   constructor(props) {
     super(props);
@@ -56,9 +55,6 @@ export default class App extends Component {
             </Tabs>
           </div>
         </ScrollWithPage>
-        {tabs[this.state.activeTab].component}
-        <div>
-        </div>
       </div>
     );
   }

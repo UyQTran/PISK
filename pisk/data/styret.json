@@ -1,0 +1,52 @@
+{
+  "members": [
+    {
+      "name": "Uy Tran",
+      "role": "Styremedlem",
+      "email": "uqtran@ifi.uio.no",
+      "picture": ""
+    },
+    {
+      "name": "Adrian Eriksen",
+      "role": "Styreleder",
+      "email": "adrian_eriksen92@hotmail.com",
+      "picture": ""
+    },
+    {
+      "name": "Øystein Halvorsen",
+      "role": "Økonomiansvarlig",
+      "email": "",
+      "picture": ""
+    },
+    {
+      "name": "Kaisa Korsak",
+      "role": "Nestleder",
+      "email": "",
+      "picture": ""
+    },
+    {
+      "name": "Martine Solberg",
+      "role": "Styremedlem",
+      "email": "",
+      "picture": ""
+    },
+    {
+      "name": "Marie Fremstad",
+      "role": "Styremedlem",
+      "email": "",
+      "picture": ""
+    },
+    {
+      "name": "Nikolas Martin",
+      "role": "Styremedlem",
+      "email": "",
+      "picture": ""
+    },
+    {
+      "name": "Sofie Lie Rapp",
+      "role": "Styremedlem",
+      "email": "",
+      "picture": ""
+    }
+  ]
+}
