@@ -3,7 +3,7 @@ import {Meteor} from 'meteor/meteor';
 import {ReactiveVar} from 'meteor/reactive-var';
 import {mount} from 'react-mounter';
 import AppLayout from '../ui/AppLayout.jsx';
-import AppHeader from '../ui/AppHeader.jsx';
+import NavBar from '../ui/NavBar.jsx';
 import LandingPage from '../ui/LandingPage.jsx';
 import WhatsUpPage from '../ui/WhatsUpPage.jsx';
 import FortranPage from '../ui/FortranPage.jsx';
@@ -15,7 +15,7 @@ FlowRouter.route('/', {
   name: 'rootview',
   action(props, {goToUrl}) {
     mount(AppLayout, {
-      header: (<AppHeader/>),
+      header: (<NavBar/>),
       main: (<LandingPage/>)
     });
   }
@@ -25,7 +25,7 @@ FlowRouter.route('/whatsup', {
   name: 'whatsup',
   action(props, {goToUrl}) {
     mount(AppLayout, {
-      header: (<AppHeader/>),
+      header: (<NavBar/>),
       main: (<WhatsUpPage/>)
     });
   }
@@ -35,7 +35,7 @@ FlowRouter.route('/fortran', {
   name: 'fortran',
   action(props, {goToUrl}) {
     mount(AppLayout, {
-      header: (<AppHeader/>),
+      header: (<NavBar/>),
       main: (<FortranPage/>)
     });
   }
@@ -45,7 +45,7 @@ FlowRouter.route('/statutes', {
   name: 'statutes',
   action(props, {goToUrl}) {
     mount(AppLayout, {
-      header: (<AppHeader/>),
+      header: (<NavBar/>),
       main: (<StatutesPage/>)
     });
   }
@@ -54,7 +54,7 @@ FlowRouter.route('/statutes', {
 FlowRouter.notFound = {
   action() {
     mount(AppLayout, {
-      header: (<AppHeader />),
+      header: (<NavBar />),
       main: (<p>404 siden finnes ikke</p>),
       footer:('')
     });

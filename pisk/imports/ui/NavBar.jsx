@@ -16,7 +16,7 @@ const tabs =
 {label:"Fortran", value:2, routeName:'fortran'},
 {label:"Vedtekter", value:3, routeName:'statutes'}];
 
-export default class App extends Component {
+export default class NavBar extends Component {
 
   constructor(props) {
     super(props);
